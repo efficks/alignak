@@ -179,8 +179,8 @@ class TestNotifications(AlignakTest):
 
         self.scheduler_loop(1, [[svc, 2, 'CRITICAL']])
         time.sleep(0.1)
-        assert svc.current_notification_number == 2
         self.assert_actions_count(3)
+        assert svc.current_notification_number == 2
 
         self.scheduler_loop(1, [[svc, 2, 'CRITICAL']])
         time.sleep(0.1)
