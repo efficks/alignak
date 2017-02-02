@@ -154,7 +154,7 @@ class TestNotifications(AlignakTest):
         svc = self.schedulers['scheduler-master'].sched.services.find_srv_by_name_and_hostname(
             "test_host_0", "test_ok_0")
         # To make tests quicker we make notifications send very quickly
-        svc.notification_interval = 0.001
+        svc.notification_interval = 0.05
         svc.checks_in_progress = []
         svc.act_depend_of = []  # no hostchecks on critical checkresults
         svc.event_handler_enabled = False
